@@ -8,11 +8,11 @@ class ModelBuilder:
     def __init__(self, activations):
         self.activations = activations
 
-    def build(self, num_layers, num_hidden):
+    def build(self, num_layers, num_hidden, input_size=2):
         model = Sequential()
 
         for i in range(num_layers):
-            model.add(Dense(input_dim=(2 if i == 0 else num_hidden), output_dim=num_hidden, init="normal"))
+            model.add(Dense(input_dim=(input_size if i == 0 else num_hidden), output_dim=num_hidden, init="normal"))
             
             activation = choice(self.activations)
             model.add(Lambda(lambda x: activation(10 * x)))
