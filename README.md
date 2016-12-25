@@ -15,6 +15,14 @@ Generating a 720p video with 10 layers and 100 hidden units it took me about 40 
 - Keras
 - PIL / Pillow
 
+# Example Videos
+Seamless
+https://gfycat.com/HelplessSmartDassierat
+https://gfycat.com/HorribleGloomyBear
+
+Normal
+https://gfycat.com/KnobbyQuarrelsomeGangesdolphin
+
 # Example Images
 ![](http://i.imgur.com/5msYPgK.png)
 ![](http://i.imgur.com/wSd8yh7.png)
