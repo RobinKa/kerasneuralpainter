@@ -34,12 +34,15 @@ scale = START_SCALE
 model = builder.build(NUM_LAYERS, NUM_HIDDEN, 3)
 print("Built model")
 
+coords_y = [2 * (j / IMAGE_SIZE[1] - 0.5) for j in range(IMAGE_SIZE[1])]
+
 iter = 0
 while True:
+    coords_z = [scale] * IMAGE_SIZE[1]
+    
     for i in range(IMAGE_SIZE[0]):
         coords_x = [2 * (i / IMAGE_SIZE[0] - 0.5)] * IMAGE_SIZE[1]
-        coords_y = [2 * (j / IMAGE_SIZE[1] - 0.5) for j in range(IMAGE_SIZE[1])]
-        coords_z = [scale] * IMAGE_SIZE[1]
+        
         coords = np.array([coords_x, coords_y, coords_z], dtype=np.float32).T
 
         # Get IMAGE_SIZEx3

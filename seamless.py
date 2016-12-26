@@ -6,10 +6,10 @@ import numpy as np
 print("Imported all")
 
 IMAGE_SIZE = [240, 320] #HW
-NUM_LAYERS = 10
-NUM_HIDDEN = 100
-STEP_COUNT = 250
-RADIUS = 2
+NUM_LAYERS = 3
+NUM_HIDDEN = 20
+STEP_COUNT = 100
+RADIUS = 0.7
 
 # Activation functions that can be called like f(x)
 activations = [
@@ -42,15 +42,15 @@ make_model()
 
 iter = 0
 while True:
+    # The "virtual" time coordinates, go around in a circle over time
+    angle = 2 * np.pi * iter / STEP_COUNT
+    coords_u = [RADIUS * np.cos(angle)] * IMAGE_SIZE[1]
+    coords_v = [RADIUS * np.sin(angle)] * IMAGE_SIZE[1]
+
     for i in range(IMAGE_SIZE[0]):
         # The imagespace coordintes
         coords_x = [2 * (i / IMAGE_SIZE[0] - 0.5)] * IMAGE_SIZE[1]
         coords_y = [2 * (j / IMAGE_SIZE[1] - 0.5) for j in range(IMAGE_SIZE[1])]
-
-        # The "virtual" time coordinates, go around in a circle over time
-        angle = 2 * np.pi * iter / STEP_COUNT
-        coords_u = [RADIUS * np.cos(angle)] * IMAGE_SIZE[1]
-        coords_v = [RADIUS * np.sin(angle)] * IMAGE_SIZE[1]
 
         coords = np.array([coords_x, coords_y, coords_u, coords_v], dtype=np.float32).T
 

@@ -28,6 +28,8 @@ builder = ModelBuilder(activations)
 
 colors = np.zeros((IMAGE_SIZE[0], IMAGE_SIZE[1], 3), dtype=np.float32)
 
+coords_y = [2 * (j / IMAGE_SIZE[1] - 0.5) for j in range(IMAGE_SIZE[1])]
+
 iter = 0
 while True:
     model = builder.build(NUM_LAYERS, NUM_HIDDEN)
@@ -36,7 +38,7 @@ while True:
 
     for i in range(IMAGE_SIZE[0]):
         coords_x = [2 * (i / IMAGE_SIZE[0] - 0.5)] * IMAGE_SIZE[1]
-        coords_y = [2 * (j / IMAGE_SIZE[1] - 0.5) for j in range(IMAGE_SIZE[1])]
+        
         coords = np.array([coords_x, coords_y], dtype=np.float32).T
 
         # Get IMAGE_SIZEx3

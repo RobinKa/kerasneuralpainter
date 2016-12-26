@@ -23,7 +23,7 @@ class ModelBuilder:
         activation = choice(self.activations)
         model.add(Lambda(lambda x: activation(10 * x)))
 
-        model.compile(optimizer="sgd", loss="mse")
+        #model.compile(optimizer="sgd", loss="mse")
 
         def evaluate(coords):
             return model.predict(coords, batch_size=coords.shape[0])

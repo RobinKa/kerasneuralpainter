@@ -17,11 +17,12 @@ Generating a 720p video with 10 layers and 100 hidden units it took me about 40 
 
 # Example Videos
 Seamless
-https://gfycat.com/HelplessSmartDassierat
-https://gfycat.com/HorribleGloomyBear
+https://gfycat.com/HandsomeWhichKawala
+https://gfycat.com/ForkedWellgroomedCob
+https://gfycat.com/TenderOilyBee
 
 Normal
-https://gfycat.com/KnobbyQuarrelsomeGangesdolphin
+https://gfycat.com/EminentDeliciousAntarcticgiantpetrel
 
 # Example Images
 ![](http://i.imgur.com/5msYPgK.png)
@@ -32,3 +33,7 @@ https://gfycat.com/KnobbyQuarrelsomeGangesdolphin
 ![](http://i.imgur.com/xStRoVI.png)
 ![](http://i.imgur.com/f4oPCV9.png)
 ![](http://i.imgur.com/KMbnrII.png)
+
+# Example Style / Color Changes
+http://imgur.com/a/9Vnqm
+http://imgur.com/a/iDxFS
